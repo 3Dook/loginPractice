@@ -1,0 +1,19 @@
+<% layout('layouts/boilerplate')%> 
+
+<div>
+    <% if(currentUser) {%>
+        <h1>HELLO <%= currentUser.username %>!</h1>
+        <h2>This is your information - don't worry you can only be logged in to view this</h2>
+        <div>
+            <ul>
+                <li>USERNAME: <%= currentUser.username %></li>
+                <li>EMAIL: <%= currentUser.email %></li>
+            </ul>
+        </div>
+        <div>
+            <form action='/user/account?_method=DELETE' method="POST" class="validated-form" novalidate>
+                <button class="btn btn-danger ">DELETE ACCOUNT</button>
+            </form>
+        </div>
+    <% } %>
+</div>

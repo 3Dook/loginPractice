@@ -1,0 +1,20 @@
+<% layout('layouts/boilerplate')%> 
+
+<div>
+    <% if(currentUser) {%>
+     <h1>HELLO <%= currentUser.username %></h1>
+    <% } %>
+
+    <h2>ABOUT THIS SITE:</h2>
+    <div>
+        <p>
+        This is a small practice project that focuses on designing and implementing user registration, login, and sign out.
+        </p>
+        <p>
+            This site also has middleware features that will populate user information while they are logged in and also protect and block certain access to ensure that the user will be logged in.
+        </p>
+        <p>
+            Thank you!</p></br><p>- Dook</p>
+        </p>
+</div>
+</div>
