@@ -1,0 +1,12 @@
+<% layout('layouts/boilerplate')%> 
+
+
+<div>
+    <!-- ADD HERE THE USER INFORMATION. Via is logged in-->
+    <% if(currentUser) {%>
+     <h1>HELLO <%= currentUser.username %> - Click the "SIGN OUT" button to sign out</h1>
+    <% } %>
+    <form action='/user/logout' method="POST" class="validated-form" novalidate>
+        <button class="btn btn-success">SIGN OUT</button>
+    </form>
+</div>
